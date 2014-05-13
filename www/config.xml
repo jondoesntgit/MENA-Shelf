@@ -3,17 +3,17 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "org.menaulit.adventist-reader"
-        version   = "1.0.0">
+        id        = "org.menaulit.mena-shelf"
+        version   = "0.1.0">
 
-    <name>Adventist Reader</name>
+    <name>MENA Shelf</name>
 
     <description>
         Multi-language reader for MENA Adventist content
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+    <author href="http://jamwheeler.com" email="jonathan.m.wheeler@gmail.com">
+        Jonathan Wheeler
     </author>
 
     <!--
