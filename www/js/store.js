@@ -31,7 +31,7 @@ function getDefaultLang() {
  */
 
 function loadContent(language) {
-
+  console.log("Loading language");
   // Grab the catalogue object based on language
   var catalog;
   switch (language)
@@ -83,11 +83,7 @@ function loadContent(language) {
   else {
     storeHTML = "An error occured. Please contact the developer." 
   }
-  
-  
-  
- 
-  $( "#main-container" ).html(storeHTML);
+  $( "#store-results-list" ).html(storeHTML);
 };
 
 
