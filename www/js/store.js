@@ -71,11 +71,13 @@ function loadContent(language) {
   }
   else if (catalog.length >=1) //If there is at least one book
   {
+  storeHTML += "<ul>"
     for(var i = 0; i < catalog.length; i++) 
     {
         var book = catalog[i];
-        storeHTML += "<a href='" + url + book.url + "'>" +  book.title + "</a>";
+        storeHTML += "<li><a href='" + url + book.url + "'>" +  book.title + "</a>";
     }
+  storeHTML += "</ul>"
   } 
   else if (catalog.length == 0) { //If there is no books in this language
     storeHTML = "Sorry, there are no books available in this language."
