@@ -20,7 +20,7 @@
 
 var lang = "en";
 var library;
-var url="http://192.168.16.219/~wheelerj/adventistmena/menashelf/";
+var url="http://menashelf.menaulit.org/";
 
 function getDefaultLang() {
   return lang;
