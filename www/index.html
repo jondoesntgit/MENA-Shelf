@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="css/logo.css"> <!-- My own custom CSS for floating logo and such -->
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script src="js/store.js"
 </head>
 <body>
 
@@ -78,7 +79,20 @@
     <a href="#mainpage" class="ui-btn-left" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a> 
     <a href="#settings" class="ui-btn-right" data-icon="grid" data-iconpos="notext" data-direction="reverse">Menu</a>
   </div> <!-- /header -->
-
+  <div data-role="main" class="ui-content" id="store-container">
+    <div id="store-language-select">
+      <select id="language-selector" onchange="updateLanguage()">
+	<option value="">Select...</option>
+	<option value="en">English</option>
+	<option value="fr">French</option>
+	<option value="tr">Turkish</option>
+	<option value="fa">Farsi</option>
+	<option value="ar">Arabic</option>
+      </select>
+    </div> <!-- /store-language-select -->
+    <div id="store-results-list"> 
+    </div> <!-- /store-results-list -->
+  </div> <!--/store main -->
 </div> <!-- /store -->
 
 <div data-role="page" id="settings" data-theme="a">
