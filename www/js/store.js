@@ -1,18 +1,3 @@
-/*$(document).ready(function(){
-   var txt = "hi";
-   $.("main-container")
-   $.getJSON("http://jamwheeler.com/sharing-solutions/store.php",function(result){
-     store=$.parseJSON(result)
-     $.each(store, function(k, v){
-       txt = "<a href='" + v.url + "'><button>" + v.name + "</button></a><br/>"
-     });
-   });
-   $("#main-container").append(txt);
-   $(document).append("Hello");
- }); 
-
-*/
-
 // Library = all languages
 // Cataloge = stuff for one specific language
 // Book = a specific instance
@@ -71,7 +56,7 @@ function loadContent(language) {
   }
   else if (catalog.length >=1) //If there is at least one book
   {
-  storeHTML += "<ul>"
+  storeHTML += '<ul data-role="listview" data-inset="true">'
     for(var i = 0; i < catalog.length; i++) 
     {
         var book = catalog[i];
@@ -91,19 +76,15 @@ function loadContent(language) {
 
 $( document ).ready(function()
 {
-   //$.getJSON("http://jamwheeler.com/sharing-solutions/store.php",function(result){
-   console.log(url + "store/remote.php");
-   $.getJSON(url + "store/remote.php",function(result)
+   $.getJSON(url + "store/index.php",function(result)
    {
      library = result;
    });
-   console.log(url + "store/remote.php");
 
 });
 
 function loadStore() {
   $( "#store-results-list" ).append("It works");
-//  $().getElementById("main").innerHTML="Hello"
 }
 
 function updateLanguage() 

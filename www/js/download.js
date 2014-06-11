@@ -30,17 +30,17 @@ function downloadData(string){
 */
 
 var b= new FileManager();
-b.download_file('http://www.jamwheeler.com/sharing-solutions/test.html','sharing-solutions/','test.html',Log('downloaded success abc123'));
+b.download_file('http://menashelf.menaulit.org/res/en/asdf.xml','sharing-solutions/','asdf.xml',Log('downloaded success abc123'));
 
 
     }
 
 function readFile() {
   var b = new FileManager()
-  b.read_file('sharing-solutions/','test.html',function(result){alert('file contents: ' + result)},alert('something went wrong'));
+  b.read_file('sharing-solutions/','asdf.xml',function(result){alert('file contents: ' + result)},alert('something went wrong'));
 }
 
-function loadContent() {
+function loadFile() {
   var b = new FileManager()
-  b.read_file('sharing-solutions/','test.html',function(result){document.getElementById("content-container").innerHTML=result},console.log('something went wrong'));
+  b.read_file('sharing-solutions/','asdf.xml',function(result){document.getElementById("content-container").innerHTML=result},console.log('something went wrong'));
 }
