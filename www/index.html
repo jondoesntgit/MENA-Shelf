@@ -28,12 +28,13 @@
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 	<script src="js/store.js"></script>
+	<script src="js/library.js"></script>
 </head>
 <body>
 
 <div data-role="page" id="mainpage" data-theme="a">
   <div data-role="header" data-position="inline">
-    <h1>Quarterly Reader</h1>
+    <h1>MENA Shelf</h1>
     <a href="#mainpage" class="ui-btn-left" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a> 
     <a href="#settings" class="ui-btn-right" data-icon="grid" data-iconpos="notext" data-direction="reverse">Menu</a>
   </div> <!-- /header -->
@@ -49,13 +50,6 @@
     <li><a href="#">Web</a></li>
   </ul>
 
-  <!-- Start debugging here -->
-  <p> Here are a few buttons containing some experimental functions </p>
-
-  <button onclick="readFile()">Read</button>
-  <button onclick="downloadData('')">Download</button>
-
-  <!-- End experimental section -->
   </div>
   <!-- <div data-role="footer" data-position="fixed"> 
     Maybe I'll include that someday if I need a footer on the first page -->
@@ -63,19 +57,24 @@
 
 <div data-role="page" id="reader" data-theme="a">
   <div data-role="header" data-position="inline">
-    <h1>Quarterly Reader</h1>
+    <h1>Device Library</h1>
     <a href="#mainpage" class="ui-btn-left" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a> 
     <a href="#settings" class="ui-btn-right" data-icon="grid" data-iconpos="notext" data-direction="reverse">Menu</a>
   </div> <!-- /header -->
   <div data-role="main" class="ui-content" id="content-container">
-  <button onclick="loadContent()">Load Content</button>
+  <script>
+    $(document).on('pageshow', '#reader', loadLibrary);
+  </script>
+    <div id="library">
+
+    </div> <!-- /library -->
 
   </div> <!-- /content-container -->
 </div> <!-- /reader -->
 
 <div data-role="page" id="store" data-theme="a">
   <div data-role="header" data-position="inline">
-    <h1>Quarterly Reader</h1>
+    <h1>MENA Shelf Store</h1>
     <a href="#mainpage" class="ui-btn-left" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a> 
     <a href="#settings" class="ui-btn-right" data-icon="grid" data-iconpos="notext" data-direction="reverse">Menu</a>
   </div> <!-- /header -->
@@ -97,7 +96,7 @@
 
 <div data-role="page" id="settings" data-theme="a">
   <div data-role="header" data-position="inline">
-    <h1>Quarterly Reader</h1>
+    <h1>Settings</h1>
     <a href="#mainpage" class="ui-btn-left" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a> 
     <a href="#settings" class="ui-btn-right" data-icon="grid" data-iconpos="notext" data-direction="reverse">Menu</a>
   </div> <!-- /header -->
