@@ -1,4 +1,3 @@
-function downloadData(string){
 
 /*
             //
@@ -29,11 +28,11 @@ function downloadData(string){
             b.download_file('http://www.greylock.com/teams/42-Josh-Elman','filder_a/dwonloads_folder/','target_name.html',Log('downloaded sucess'));
 */
 
-var b= new FileManager();
-b.download_file('http://menashelf.menaulit.org/res/en/asdf.xml','sharing-solutions/','asdf.xml',Log('downloaded success abc123'));
-
-
-    }
+function downloadData(string){
+  console.log('Downloading data');
+  var b= new FileManager();
+  b.download_file('http://menashelf.menaulit.org/res/'+string,'menashelf/','asdf.xml',console.log('downloaded ' + string + 'successfully'),console.log('error downloading ' + string));
+}
 
 function readFile() {
   var b = new FileManager()
@@ -41,6 +40,7 @@ function readFile() {
 }
 
 function loadFile() {
+  console.log('loadFile is being executed');
   var b = new FileManager()
-  b.read_file('sharing-solutions/','asdf.xml',function(result){document.getElementById("content-container").innerHTML=result},console.log('something went wrong'));
+  b.read_file('menashelf/','asdf.xml',function(result){document.getElementById("content-container").innerHTML=result},console.log('something went wrong'));
 }
