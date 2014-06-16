@@ -7,8 +7,7 @@ var lang = "en";
 var library;
 var url="http://menashelf.menaulit.org/";
 
-function getDefaultLang() {
-  return lang;
+function getDefaultLang() { return lang;
 }
 
 /**
@@ -76,6 +75,9 @@ function loadContent(language) {
 
 $( document ).ready(function()
 {
+   console.log('Attempting to load file')
+   var b = new FileManager()
+   b.download_file('http://menashelf.menaulit.org','menashelf','asdf.xml',console.log('finished downloading'));
    $.getJSON(url + "store/index.php",function(result)
    {
      library = result;
