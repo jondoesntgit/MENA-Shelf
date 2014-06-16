@@ -32,20 +32,20 @@ function downloadData(string){
   console.log('Downloading data');
   var b= new FileManager();
   //touch the file
-  b.load_file('menashelf/','asdf.xml',console.log('file created'), console.log('something went wrong'));
+  b.load_file('menashelf','asdf.xml',console.log('file created'), console.log('something went wrong'));
   console.log('Finished touching file');
-  b.write_file('menashelf/','asdf.xml','<p>this is demo content</p>',console.log('wrote sucessful!'));
-  b.download_file('http://menashelf.menaulit.org/res/asdf.xml','menashelf/','asdf.xml',console.log('error downloading ' + string));
+  b.write_file('menashelf','asdf.xml','<p>this is demo content</p>',console.log('wrote sucessful!'));
+  b.download_file('http://menashelf.menaulit.org/res/asdf.xml','menashelf','asdf.xml',console.log('error downloading ' + string));
   console.log('Finish downloading data');
 }
 
 function readFile() {
   var b = new FileManager()
-  b.read_file('sharing-solutions/','asdf.xml',function(result){alert('file contents: ' + result)},alert('something went wrong'));
+  b.read_file('sharing-solutions','asdf.xml',function(result){alert('file contents: ' + result)},alert('something went wrong'));
 }
 
 function loadFile() {
   console.log('loadFile is being executed');
   var b = new FileManager()
-  //b.read_file('menashelf/','asdf.xml',function(result){document.getElementById("content-container").innerHTML=result},console.log('something went wrong'));
+  b.read_file('menashelf','asdf.xml',function(result){document.getElementById("content-container").innerHTML=result},console.log('something went wrong'));
 }
