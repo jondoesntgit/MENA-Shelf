@@ -3,5 +3,6 @@ loadLibrary = function(event){
   //console.log('Attempting download');
   //downloadData('en/asdf.xml');
   console.log('Attempting to load file')
-  loadFile();
+  var b = new FileManager()
+  b.read_file('menashelf','asdf.xml',function(result){$("#library").append(result); console.log('loaded file successfully')},console.log('something went wrong'));
 }
