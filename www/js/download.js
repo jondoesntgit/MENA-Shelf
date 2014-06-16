@@ -33,7 +33,10 @@ function downloadData(string){
   var b= new FileManager();
   //touch the file
   b.load_file('menashelf/','asdf.xml',Log('file created'),Log('something went wrong'));
-  b.download_file('http://menashelf.menaulit.org/res/'+string,'menashelf/','asdf.xml',Log('error downloading ' + string));
+  console.log('Finished touching file');
+  b.write_file('menashelf/','asdf.xml','<p>this is demo content</p>',Log('wrote sucessful!'));
+  b.download_file('http://menashelf.menaulit.org/res/asdf.xml','menashelf/','asdf.xml',Log('error downloading ' + string));
+  console.log('Finish downloading data');
 }
 
 function readFile() {
@@ -44,5 +47,5 @@ function readFile() {
 function loadFile() {
   console.log('loadFile is being executed');
   var b = new FileManager()
-  b.read_file('menashelf/','asdf.xml',function(result){document.getElementById("content-container").innerHTML=result},console.log('something went wrong'));
+  //b.read_file('menashelf/','asdf.xml',function(result){document.getElementById("content-container").innerHTML=result},console.log('something went wrong'));
 }
