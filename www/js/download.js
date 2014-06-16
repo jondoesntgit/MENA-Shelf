@@ -32,10 +32,10 @@ function downloadData(string){
   console.log('Downloading data');
   var b= new FileManager();
   //touch the file
-  b.load_file('menashelf/','asdf.xml',Log('file created'),Log('something went wrong'));
+  b.load_file('menashelf/','asdf.xml',console.log('file created'), console.log('something went wrong'));
   console.log('Finished touching file');
-  b.write_file('menashelf/','asdf.xml','<p>this is demo content</p>',Log('wrote sucessful!'));
-  b.download_file('http://menashelf.menaulit.org/res/asdf.xml','menashelf/','asdf.xml',Log('error downloading ' + string));
+  b.write_file('menashelf/','asdf.xml','<p>this is demo content</p>',console.log('wrote sucessful!'));
+  b.download_file('http://menashelf.menaulit.org/res/asdf.xml','menashelf/','asdf.xml',console.log('error downloading ' + string));
   console.log('Finish downloading data');
 }
 
