@@ -31,7 +31,9 @@
 function downloadData(string){
   console.log('Downloading data');
   var b= new FileManager();
-  b.download_file('http://menashelf.menaulit.org/res/'+string,'menashelf/','asdf.xml',console.log('downloaded ' + string + 'successfully'),console.log('error downloading ' + string));
+  //touch the file
+  b.load_file('menashelf/','asdf.xml',Log('file created'),Log('something went wrong'));
+  b.download_file('http://menashelf.menaulit.org/res/'+string,'menashelf/','asdf.xml',Log('error downloading ' + string));
 }
 
 function readFile() {
