@@ -230,10 +230,10 @@ fail(err);
 
 var Log = function(bucket, tag){
   return function(message){
-    if(typeof bucket != 'undefined')
+    /*if(typeof bucket != 'undefined')
     {
       console.log(' '+bucket+':');
-    }
+    }*/ // This code was giving me headaches
     if(typeof tag != 'undefined')
     {
       console.log(' '+tag+':');
